@@ -21,6 +21,7 @@ sequelize
 const articleRouter = require("./routes/article")
 app.use('/', articleRouter) 
 
+app.get('/article', articleRouter)
 
 app.listen({port}, () => {
     console.log('app is running on port '+port)
