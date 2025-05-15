@@ -18,10 +18,9 @@ sequelize
         console.log('cant connect to database: ', err)
     })
 
+const articleRouter = require("./routes/article")
+app.use('/', articleRouter) 
 
-app.get('/', (req, res) => {
-    res.json({message: "Welcome to sequelize!"})
-})
 
 app.listen({port}, () => {
     console.log('app is running on port '+port)
