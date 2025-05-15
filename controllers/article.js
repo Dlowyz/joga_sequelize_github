@@ -20,7 +20,16 @@ const getArticleBySlug = (req, res) => {
   models.Article.findOne({
     where: {
       slug: req.params.slug
-    }
+    },
+    include: [
+      {
+        model: models.Author,
+      },
+      {
+        model: models.Tag,
+        through: models.ArticleTag
+      }
+    ]
   })
   .then(article => {
     console.log(article);

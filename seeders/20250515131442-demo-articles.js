@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-  up (queryInterface, Sequelize) {
+  up(queryInterface, Sequelize) {
     return Promise.all([
       queryInterface.bulkInsert('Articles', [{
         name: 'Introduction to Ashtanga',
@@ -19,7 +19,7 @@ module.exports = {
         image: 'morning.jpg',
         body: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>',
         published: '2020-04-14 15:02:41',
-        author_id: 3,
+        author_id: 2,
         createdAt: new Date(),
         updatedAt: new Date()
       }]),
