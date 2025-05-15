@@ -24,6 +24,9 @@ app.use('/', articleRouter)
 const authorRoutes = require('./routes/author');
 app.use('/author', authorRoutes);
 
+const adminArticlesRouter = require('./routes/admin/articles');
+app.use('/admin', adminArticlesRouter);
+
 
 app.get('/article', articleRouter)
 
